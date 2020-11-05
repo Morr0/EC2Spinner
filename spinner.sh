@@ -7,6 +7,7 @@ aws ec2 run-instances \
                                                 ,{Key=Test, Value=Test}]" \
 --user-data "
     #!/bin/bash
+    yum install -y git
     yum install -y docker
     service docker start
     sleep 31m; sudo shutdown -h now
